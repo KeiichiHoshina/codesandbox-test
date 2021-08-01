@@ -1,26 +1,32 @@
-// 23. スプレッド構文 ...
+// 24. mapやfilterを使った配列の処理
 
-// const arr1 = [1, 2];
-// console.log(arr1);
-// console.log(...arr1);
+// const nameArr = ["田中", "山田", "じゃけぇ"];
 
-// const sumFunc = (num1, num2) => console.log(num1 + num2);
-// sumFunc(arr1[0], arr1[1]);
-// sumFunc(...arr1);
+// for (let i = 0; i < nameArr.length; i++) {
+//   console.log(nameArr[i]);
+//   console.log(`${i+1}番目は${nameArr[i]}です`);
+// }
 
-// const arr2 = [1, 2, 3, 4, 5];
-// const [num1, num2, ...num3] = arr2;
-// console.log(num1);
-// console.log(num2);
-// console.log(num3);
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
 
-// const arr4 = [10, 20];
-// const arr5 = [30, 40];
+// nameArr.map((name) => console.log(name));
+// nameArr.map((name, i) => console.log(`${i + 1}番目は${name}です`));
+// nameArr.map((name) => console.log(`${name}です`));
 
-// const arr6 = [...arr4];
-// arr6[0] = 100;
-// console.log(arr6);
-// console.log(arr4);
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
 
-// const arr7 = [...arr4, ...arr5];
-// console.log(arr7);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "じゃけぇ") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
