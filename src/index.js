@@ -1,11 +1,26 @@
-// 19. テンプレート文字列 ``
+// 20. アロー関数 =>
 
-const name = "じゃけぇ";
-const age = "28";
+// 無名関数
+function func(str) {
+  return str;
+}
+console.log(func("funcです"));
 
-const message1 =
-  "私の名前は" + name + "です。年齢は" + age + "です。（その１）";
-console.log(message1);
+// 関数
+const func1 = function (str) {
+  return str;
+};
+console.log(func1("func1です"));
 
-const message2 = `私の名前は${name}です。年齢は${age}です。（その２）`;
-console.log(message2);
+// アロー関数
+// const func2 = (str) => {
+//   return str;
+// };
+const func2 = (str) => str;
+console.log(func2("func2です"));
+
+// const func3 = (num1, num2) => {
+//   return num1 + num2;
+// };
+const func3 = (num1, num2) => num1 + num2;
+console.log(func3(10, 20));
